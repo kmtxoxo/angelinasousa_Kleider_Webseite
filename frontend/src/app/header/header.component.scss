@@ -1,0 +1,77 @@
+
+.navbar-brand {
+  position: relative;
+  background: url(../../assets/img/logos/logo.png);
+  background-repeat: no-repeat;
+  margin-top: 20px;
+  width: 300px;
+  height: 70px;
+  left: 15px;
+  background-size: contain;
+}
+
+.navbar-nav li a {
+  line-height: 70px;
+}
+
+.navbar {
+  margin-bottom: 0;
+  z-index: 1;
+  font-Size: 22px;
+  -webkit-box-shadow: 0px -22px 20px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -2px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px -2px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+.navbar-nav.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.small-navbar-li {
+  display: none !important;
+}
+.item {
+  position:relative;
+
+  display:inline-block;
+}
+.list-badge{
+  position: absolute;
+  left:07px;
+  top:35px;
+  border-radius:0;
+  color:grey;
+  background-color:transparent;
+  font-size:12px;
+}
+
+.list-badge2{
+  position: absolute;
+  left:04px;
+  top:35px;
+  border-radius:0;
+  color:grey;
+  background-color:transparent;
+  font-size:12px;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    position: relative;
+    background: url(../../assets/img/logos/logo-klein.png);
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 30px;
+    left: 15px;
+    background-size: contain;
+    margin-top: 15px;
+  }
+  .navbar-center {
+       position: unset !important;
+       left: unset !important;
+       -webkit-transform: unset !important;
+       transform: unset !important;
+     }
+}

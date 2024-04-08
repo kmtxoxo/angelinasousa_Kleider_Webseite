@@ -1,0 +1,253 @@
+
+.produkt-center-container {
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 100px;
+  margin-top: 80px;
+}
+
+.thumbnail {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 2px;
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+}
+
+.thumbnail:nth-child(1) {
+  margin-top: 0;
+}
+
+.thumbnail:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.thumbnails {
+  width: 25%;
+}
+
+.produktbild {
+  width: 75%;
+}
+
+.topline {
+  border-top: 2px solid #E6E6E6;
+}
+
+h3.unterueberschrift {
+  font-size: 16px;
+  font-weight: 600;
+  color: #606060;
+  margin-top: 12px;
+}
+
+.produktmaterial,
+.produktbeschreibung {
+  color: #8F8F8F;
+}
+
+.button-color {
+  color: #fff;
+  background-color: #606060;
+  border-color: #606060;
+}
+
+.sharp {
+  border-radius: 0;
+}
+
+.produktpreis {
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.produktpreisinfo {
+  padding-top: 4px;
+  color: #7E7E7E;
+}
+
+.produktfarbe {
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.produktgroesse {
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.margin {
+  margin-bottom: 30px;
+}
+
+.margin-m {
+  margin-bottom: 15px;
+}
+
+.margin-small {
+  margin-bottom: 5px;
+}
+
+.produkttitel {
+  margin-top: 3px;
+  margin-bottom: 20px;
+}
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Temporär Instagram */
+
+.blogtext {
+  font: 1.5em Lato, sans-serif;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/* Media Queries */
+
+@media (max-width: 997px) {
+  .thumbnails {
+    display: none;
+  }
+  .produktbild {
+    width: 100%;
+    max-width: 500px;
+  }
+  .produkt-center-container {
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: 80px;
+  }
+
+  .produkttitel {
+    text-align: center;
+  }
+  .responsive-inline {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 1190px) {
+  .gallery-item:nth-child(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .gallery-item:nth-child(2) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .blogcontent, .blogtext, .gallery-container {
+    display: none;
+  }
+}
+
+/* Instagram 2 Version */
+
+.visually-hidden {
+  display: none;
+}
+
+/* Gallery Section */
+.gallery-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 100px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem -1rem;
+  padding-bottom: 3rem;
+}
+
+.gallery-item {
+  position: relative;
+  flex: 1 0 22rem;
+  margin: 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.gallery-item:hover .gallery-item-info,
+.gallery-item:focus .gallery-item-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item-info {
+  display: none;
+}
+
+.gallery-item-info li {
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.gallery-item-likes {
+  margin-right: 2.2rem;
+}
+
+.gallery-item-type {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2.5rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+.fa-clone,
+.fa-comment {
+  transform: rotateY(180deg);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*
+
+The following code will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox & floated styling.
+*/
+
+@supports (display: grid) {
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-gap: 1rem;
+  }
+
+  .gallery-item,
+  .gallery {
+    width: auto;
+    margin: 0;
+  }
+
+}

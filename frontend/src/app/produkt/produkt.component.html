@@ -1,0 +1,223 @@
+<div *ngIf="produkte[selectedProdcutIndex] !== undefined" class="produkt-center-container">
+  <div class="row">
+
+
+    <!-- produktbilder -->
+    <div class="col-md-7">
+      <div class="thumbnails col-md-12">
+        <img class="thumbnail" src="{{'http://localhost/img/produktbilder/' +produkte[selectedProdcutIndex].hauptbild}}" (click)="OnChangePictureClicked('hauptbild')" alt="Productpreview1">
+        <img *ngIf="produkte[selectedProdcutIndex].thumbnail1 !== null" class="thumbnail" src="{{'http://localhost/img/produktbilder/' +produkte[selectedProdcutIndex].thumbnail1}}" (click)="OnChangePictureClicked('thumbnail1')" alt="Productpreview2">
+        <img *ngIf="produkte[selectedProdcutIndex].thumbnail2 !== null" class="thumbnail" src="{{'http://localhost/img/produktbilder/' +produkte[selectedProdcutIndex].thumbnail2}}" (click)="OnChangePictureClicked('thumbnail2')" alt="Productpreview3">
+      </div>
+      <img class="produktbild" id="produkthauptbild" src="{{'http://localhost/img/produktbilder/' +currentImage}}" alt="Produktbild">
+    </div>
+    <!-- produktbilder END -->
+
+
+    <!-- produktdaten -->
+
+    <div class="col-md-5 ">
+      <div class="produktdaten">
+        <div class="row">
+          <div class="col-md-12 ">
+            <h2 class="produkttitel">{{produkte[selectedProdcutIndex].kollektion}} -
+              {{produkte[selectedProdcutIndex].name}}</h2>
+          </div></div>
+
+        <div class="row margin-small">
+          <div class="col-md-3 no-break responsive-inline">
+            <p class="produktpreis">{{produkte[selectedProdcutIndex].preis + '€'}}</p>
+          </div>
+          <div class="col-md-auto no-break responsive-inline">
+            <p class="produktpreisinfo">inkl. MwSt. & Versand</p>
+          </div>
+        </div>
+
+
+
+
+        <div class="row margin-small">
+          <div class="col-md-3 no-break responsive-inline">
+            <p class="produktfarbe">Farbe:</p>
+          </div>
+
+          <div class="col-md-auto no-break responsive-inline">
+            <p class="produktfarbeinput">{{produkte[selectedProdcutIndex].farbe}}</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 ">
+            <p class="produktgroesse"> <label for="sizeselect">Grösse:</label></p>
+          </div>
+        </div>
+
+        <div class="row  margin">
+          <div class="col-md-12">
+            <form id="groessenauswahl" name="groessenauswahl" action="">
+              <select id="sizeselect" class="selectpicker form-control" (change)="onChangeGroesse($event.target.value)" >
+                <option *ngFor="let produkt of produkte;let i = index" value="{{i}}">{{produkt.groesse}}</option>
+              </select>
+            </form>
+          </div>
+        </div>
+
+
+
+        <div class="row  margin-m">
+          <div class="col-md-10 ">
+            <button type="button" class="btn button-color btn-lg sharp btn-block" (click)="OnAddToCartClicked()">IN MEINE TASCHE</button>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-12 ">
+            <div class="produktbeschreibung">
+              <h3 class="unterueberschrift">Beschreibung</h3>
+              <p>{{produkte[selectedProdcutIndex].beschreibung}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 ">
+            <div class="produktmaterial topline">
+              <h3 class="unterueberschrift">Material</h3>
+              <p>{{produkte[selectedProdcutIndex].material}}}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- produktdaten END-->
+  </div>
+</div>
+
+
+
+
+<!-- IG  -->
+<div class="row">
+  <div class="col-md-12 text-center">
+    <p class="blogtext">@ Follow us on Instagram</p>
+  </div>
+</div>
+
+<main>
+
+  <div class="gallery-container">
+
+    <div class="gallery">
+
+      <div class="gallery-item" tabindex="0">
+
+        <img src="../../assets/img/Instagram/IMG_2719.JPG" class="gallery-image" alt="">
+
+        <div class="gallery-item-info">
+
+          <ul>
+            <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 56</li>
+            <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 2</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1502630859934-b3b41d18206c?w=500&h=500&fit=crop" class="gallery-image" alt="">
+
+        <div class="gallery-item-info">
+
+          <ul>
+            <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 89</li>
+            <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 5</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="gallery-item" tabindex="0">
+
+        <img src="../../assets/img/Instagram/IMG_2687.JPG" class="gallery-image" alt="">
+
+        <div class="gallery-item-type">
+
+          <span class="visually-hidden">Gallery</span><i class="fas fa-clone" aria-hidden="true"></i>
+
+        </div>
+
+        <div class="gallery-item-info">
+
+          <ul>
+            <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 42</li>
+            <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 1</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="gallery-item" tabindex="0">
+
+        <img src="https://images.unsplash.com/photo-1502630859934-b3b41d18206c?w=500&h=500&fit=crop" class="gallery-image" alt="">
+
+        <div class="gallery-item-type">
+
+          <span class="visually-hidden">Video</span><i class="fas fa-video" aria-hidden="true"></i>
+
+        </div>
+
+        <div class="gallery-item-info">
+
+          <ul>
+            <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 38</li>
+            <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 0</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="gallery-item" tabindex="0">
+
+        <img src="../../assets/img/Instagram/IMG_3061.JPG" class="gallery-image" alt="">
+
+        <div class="gallery-item-type">
+
+          <span class="visually-hidden">Gallery</span><i class="fas fa-clone" aria-hidden="true"></i>
+
+        </div>
+
+        <div class="gallery-item-info">
+
+          <ul>
+            <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 47</li>
+            <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 1</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- End of gallery -->
+  </div>
+  <!-- End of container -->
+
+</main>

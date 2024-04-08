@@ -1,0 +1,117 @@
+/*Kinder Seite */
+
+
+
+.produkt {
+  display:inline-block;
+  font-family: sans-serif;
+  position:relative;
+  width: 96%;
+  max-width: 300px;
+}
+
+.produktbild{
+  position: relative;
+  width:100%;
+  max-height: 340px;
+  min-height: 340px;
+  /* Wenn alle Bilder selbe größe haben
+
+    max-height: 380px;
+    min-height: 380px;
+    overflow: hidden;
+   */
+}
+
+.bildsrc{
+  width:100%;
+  height:auto;
+}
+
+.produkttext {
+  padding: 2px 16px;
+  text-align:center;
+  font-size:16px;
+  margin-top:10px;
+}
+
+.produktname{
+
+  display:inline-block;
+  color:#606060;
+  width: 70%;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.produktpreis{
+  /*float:right;*/
+  display:inline-block;
+  color:#4C4C4C;
+  width:30%;
+  text-align:right;
+  min-width:56px;
+}
+
+.produktgruppe{
+  text-align:center;
+  width:100%;
+  margin-bottom:100px;
+  margin-top:80px;
+}
+
+.produktgruppe-center{
+  max-width: 1200px;
+  margin:auto;
+}
+
+.row-margin{
+  margin-bottom:50px;
+}
+
+
+
+/* Kinder Seitte ENDE */
+/*Hover "Zum Kleid"*/
+.overlay{
+  position: absolute;
+  bottom: 0;
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.9);
+  height: 25%;
+  width: 100%;
+  max-width: 300px;
+  transition: .5s ease;
+  opacity: 0;
+  color: black;
+  font-size: 3vm;
+  padding: 20px 0;
+  text-align: center;
+}
+.produktbild:hover .overlay {
+  opacity: 1;
+}
+/*Hover "Zum Kleid" ENDE*/
+
+.hoversrc{
+  vertical-align: middle;
+  height: 90%;
+  width: auto;
+  margin-right: 5%;
+
+}
+.hovertxt{
+
+}
+
+
+#banner{
+  background: transparent url(../../assets/img/testbanner2.png) no-repeat center center;
+  height: 320px;
+  overflow: hidden;
+  width: 100%;
+  text-transform: uppercase;
+  line-height: 400px;
+  position: relative;
+  background-size: cover;
+}

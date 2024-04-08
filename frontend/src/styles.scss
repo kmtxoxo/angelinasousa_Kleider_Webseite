@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+body,
+html {
+  width: 100%;
+  margin: 0;
+  /*font-family: 'Montserrat', serif; TESTEN WAS BESSER AUSSIEHT*/
+}
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 7rem;    /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 7rem;            /* Footer height */
+}
+
+@media (max-width: 992px) {
+  #footer {
+    height: 10rem;            /* Footer height */
+  }
+  #content-wrap {
+    padding-bottom: 10rem;    /* Footer height */
+  }
+}
+
+/* Loader */
+/*<div class="loader"></div>*/
+.loader {
+  width: 5rem;
+  height: 5rem;
+  border: 0.6rem solid #999;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: loader 500ms linear infinite;
+}

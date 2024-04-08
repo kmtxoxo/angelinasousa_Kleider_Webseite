@@ -1,0 +1,29 @@
+create table KLEID
+(
+   artikelnummer int not null auto_increment,
+   name          varchar(30),
+   preis         decimal(4,2),
+   farbe         varchar(40),
+   groesse       varchar(40),
+   beschreibung  varchar(300),
+   material	 varchar(300),
+   hauptbild     varchar(300),
+   thumbnail1    varchar(300),
+   thumbnail2    varchar(300),
+   kollektion    varchar(60),
+   kategorie ENUM('Frauen', 'Kinder', 'Soum'),
+   primary key (artikelnummer)
+)
+auto_increment = 1000;
+
+INSERT INTO kleid (`name`, `preis`, `farbe`, `groesse`, `beschreibung`, `material`, `hauptbild`, `thumbnail1`, `thumbnail2`, `kollektion`, `kategorie`)
+VALUES ('Laço',134.23,'Weiß','6-8 Jahre','Das Kleid Laço aus der Kollektion Laços ist Perfekt geignet für die anlässe Kominion oder Blumenmädchen. Es sitzt locker auf der Haut und fühlt sich angenehm an. Es ist perfekt geignet für den Sommer.','Samt,Spitze','producthaupt.png','product1.png','product2.png','Laços','Kinder');
+
+INSERT INTO kleid (`name`, `preis`, `farbe`, `groesse`, `beschreibung`, `material`, `hauptbild`, `thumbnail1`, `thumbnail2`, `kollektion`, `kategorie`)
+VALUES ('Margarida', 44.99, 'Bunt', '10', 'Das Kleid Margarida aus der Kollektion Flor do Campo ist Perfekt für schöne Sommertage. Es sitzt locker auf der Hautund fühlt sich angenehm an.', '87% Polyester, 13% Elastan, Futter: 100% Polyester', 'produkt24.png', 'produkt24.png', 'produkt24.png', 'Margaridas', 'Kinder');
+
+INSERT INTO kleid (`name`, `preis`, `farbe`, `groesse`, `beschreibung`, `material`, `hauptbild`, `thumbnail1`, `thumbnail2`, `kollektion`, `kategorie`)
+VALUES ('Margarida', 34.99, 'Bunt', '8', 'Das Kleid Margarida aus der Kollektion Flor do Campo ist Perfekt für schöne Sommertage. Es sitzt locker auf der Hautund fühlt sich angenehm an.', '87% Polyester, 13% Elastan, Futter: 100% Polyester', 'produkt24.png', 'produkt24.png', 'produkt24.png', 'Margaridas', 'Kinder');
+
+INSERT INTO kleid (`name`, `preis`, `farbe`, `groesse`, `beschreibung`, `material`, `hauptbild`, `thumbnail1`, `thumbnail2`, `kollektion`, `kategorie`)
+VALUES ('Testname', 95.49, 'Weiß', 'EU 38', 'Das Design der Kleider aus hochwertigen, superelastischen Materialien schmeichelt der Figur und verschönert die weiblichen Formen.', 'Futter: 100% Polyester; Hauptteil: 85% Polyester, 15% Elastan', 'Unbenannt1.png', 'Unbenannt2.png', 'Unbenannt3.png', 'Testo', 'Soum');

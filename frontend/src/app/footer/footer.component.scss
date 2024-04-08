@@ -1,0 +1,23 @@
+
+footer {
+  background-color: #4A4A4A;
+  /* height: 70px; */
+  padding-top: 22px;
+  padding-bottom: 20px;
+  white-space: nowrap;
+  color: white;
+  overflow: hidden;
+}
+
+a.footer-link {
+  color: white;
+}
+
+a.footer-link:hover {
+  color: lightgrey;
+}
+
+.footer-inhalt {
+  margin: auto;
+  width: 80%;
+}

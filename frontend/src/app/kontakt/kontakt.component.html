@@ -1,0 +1,45 @@
+<section class="wrap-center">
+
+
+  <h1 class="text-center formularheader">Kontaktformular</h1>
+  <div class="row">
+    <div class="col-sm-5 big-font-Size kontakttext">
+      <p class=" bold">Sie haben fragen zu einem unserer Produkte?<br>Senden sie uns einfach eine Nachricht über das Kontaktformular oder kontatieren sie uns gerne direkt.</p>
+      <p class=" bold"><span class="glyphicon glyphicon-map-marker"></span> Moosbergstraße 26, Darmstadt</p>
+      <p class=" bold"><span class="glyphicon glyphicon-envelope"></span> Angelinasousa@web.de</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" required type="email">
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="artikelnummer" name="artikelnummer" placeholder="Artikelnummer" type="text">
+        </div>
+
+      </div>
+      <div class="row" style="padding-right: 15px;">
+        <textarea class="form-control" maxlength="500" minlength="10" id="anliegen" name="anliegen" required placeholder="Ihr Anliegen" rows="5"></textarea><br>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 form-group"  style="padding: 0;">
+          <button type="submit" class="btn button-color btn-lg sharp btn-block">ABSENDEN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add Google Maps -->
+<agm-map [latitude]='lat' [longitude]='lng'
+         [scrollwheel]="scrollwheel"
+         [zoom]="zoom"
+         [draggable]="draggable"
+         [mapTypeId]='mapType'>
+</agm-map>

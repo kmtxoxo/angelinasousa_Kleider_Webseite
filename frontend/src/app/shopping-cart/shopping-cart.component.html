@@ -1,0 +1,35 @@
+<section class="wrap-center container" >
+  <h2>Warenkorb</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th  class="col-md-6">Produkt Details</th>
+      <th  class="col-md-3 center-mid">Anzahl</th>
+      <th  class="col-md-3 center-mid">Preis</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of products">
+      <td>
+        <div class="produkt_image"><img src="{{'http://localhost/img/produktbilder/' + product.hauptbild}}" width="100px" height="120px"></div>
+        <div class="product_details"><p class="cart_produktname">{{product.kollektion + ' - ' + product.name}}</p>
+          <p class="cart_produktfarbe">Farbe: {{product.farbe}}</p>
+          <p class="cart_produktgroesse">Größe: {{product.groesse}}</p>
+        </div>
+      </td>
+
+      <td class="center-mid">
+        <select><!-- Produkt hat anzahl von ware, ngfor  mit anzahl -->
+          <option value="volvo">1</option>
+          <option value="saab">2</option>
+          <option value="mercedes">3</option>
+          <option value="audi">4</option>
+        </select>
+        <a (click)="OnRemoveClicked(product.artikelnummer)"><p>Entfernen</p></a></td>
+      <td class="center-mid">{{product.preis + '€'}}</td>
+    </tr>
+
+    </tbody>
+  </table>
+</section>
+

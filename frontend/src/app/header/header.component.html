@@ -1,0 +1,33 @@
+<!-- NAVBAR -->
+<nav class="navbar navbar-default" role="navigation">
+
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a routerLink="/home" class="navbar-brand"></a>
+  </div>
+
+
+
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-center">
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/soum">Soum</a></li>
+      <li><a routerLink="/women">Frauen</a></li>
+      <li><a routerLink="/kids">Kinder</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="small-navbar-li"><a routerLink="/home">Home</a></li>
+      <li class="small-navbar-li"><a routerLink="/soum">Soum</a></li>
+      <li class="small-navbar-li"><a routerLink="women">Frauen</a></li>
+      <li class="small-navbar-li"><a routerLink="/kids">Kinder</a></li>
+      <li><a routerLink="/cart"><div class="item  my-cart-icon"><span id="cartbadge" class="badge list-badge">{{anzahl}}</span><img src="../../assets/img/logos/bag.png"> </div></a></li>
+      <li><a routerLink="/kontakt"><img src="../../assets/img/logos/flag.png"></a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- NavBar End -->

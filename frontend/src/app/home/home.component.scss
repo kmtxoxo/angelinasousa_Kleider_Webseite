@@ -1,0 +1,62 @@
+/* SLIDESHOW - CSS*/
+
+.carousel-caption-h3 {
+  margin: 10px 0 30px 0;
+  letter-spacing: 10px;
+  font-size: 20px;
+  color: #111;
+}
+
+.carousel-inner img {
+  /*-webkit-filter: grayscale(90%);
+    filter: grayscale(90%);*/
+  /* make all photos black and white */
+  width: 100%;
+  /* Set width to 100% */
+  margin: auto;
+}
+
+.carousel-caption h3 {
+  color: #fff !important;
+}
+
+#myCarousel {
+  margin-bottom: 100px;
+}
+/* SLIDESHOW - CSS - END */
+
+
+
+/* 3erBlock - CSS*/
+.column-banner-img {
+  margin-bottom: 20px;
+}
+
+.column-banner-header {
+  color: black;
+}
+
+.column-banner-text {
+  color: grey;
+}
+
+.banner {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.banner-center-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+
+/*     Media Queries  */
+
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none;
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+}
