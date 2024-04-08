@@ -42,7 +42,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     HttpClientJsonpModule,
     FormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCt5zrRd9Dsq6DNhMR8YtSZPUZBbxeE9kY'
+      apiKey: ''
     })
   ],
   providers: [],
